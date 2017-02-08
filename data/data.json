@@ -1,0 +1,70 @@
+questionBank = [
+  {
+    scenario: "\"Boker tov! We need young pioneers like you to build a new country,\" says the administator. \"I have a few questions before I assign you to a settlement group. First, what youth movement do you belong to?\"",
+    answers: [
+      {
+        option: "Marxist",
+        data: {econ: -5, rep: 5, sol: 5, pop: 10},
+        response: "\"Good, good,\" he replies. \"You, too, believe in the international revolution of the working class!\""
+      },
+      {
+        option: "Socialist",
+        data: {econ: 0, rep: 0, sol: 0, pop: 0},
+        response: "\"Indeed,\" he replies. \"We must live from each according to his ability to each according to his needs.\""
+      },
+      {
+        option: "Labor Zionist",
+        data: {econ: 10, rep: 0, sol: -5, pop: 0},
+        response: "\"Yes, let us build a new homeland for the Jews,\" he says. \"As Herzl wrote, 'If you will it, it's not a dream.'\""
+      },
+      {
+        option: "Religious",
+        data: {econ: -5, rep: 0, sol: 5, pop: 5},
+        response: "\"Amen,\" he says. \"Our people's return to the Promised Land is divine will.\""
+      }
+    ],
+    era: 0
+  },
+  {
+    scenario: "The administrator scratches your answers on a file. \"Taming this land isn't for the weak of heart or body,\" he warns as he unfolds a map. \"Where in Palestine do you want to begin?\"",
+    answers: [
+      {
+        option: "The North",
+        data: {econ: 0, rep: 10, sol: 0, pop: 0},
+        response: "\"Ah, a true adventurer!\" he says. \"We will send you to the mountains past Lake Kinnereth.\""
+      },
+      {
+        option: "The East",
+        data: {econ: 0, rep: 0, sol: 5, pop: 5},
+        response: "\"Truly, the way of the pioneers,\" he replies. \"You will settle the legendary Jezreel Valley of the Galilee.\""
+      },
+      {
+        option: "The South",
+        data: {econ: 10, rep: -5, sol: 0, pop: 5},
+        response: "\"A safe choice,\" he tells you. \"You can build along the coastal plain of the Mediterranean.\""
+      }
+    ],
+    era: 0
+  },
+  {
+    scenario: "Test scenario era 1",
+    answers: [
+      {
+        option: "Test option 1",
+        data: {econ: 0, rep: 10, sol: 0, pop: 0},
+        response: "Test response option 1"
+      },
+      {
+        option: "Test option 2",
+        data: {econ: 0, rep: 0, sol: 5, pop: 5},
+        response: "Test response option 2"
+      },
+      {
+        option: "Test option 3",
+        data: {econ: 10, rep: -5, sol: 0, pop: 5},
+        respons: "Test response option 3"
+      }
+    ],
+    era: 1
+  }
+]

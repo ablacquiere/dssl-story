@@ -1,0 +1,10 @@
+{
+  "name": "dssl-story",
+  "version": "0.0.1",
+  "description": "Story editor and game for DSSL-ICA project",
+  "dependencies": {
+    "express": "^4.10.2",
+    "fabric": "^1.7.3",
+    "socket.io": "^1.7.2"
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>story-framework</title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    #gameArea {
+      position: relative;
+      width: 1000px;
+    }
+    #canvas {
+      position: absolute;;
+      border: black thin solid;
+    }
+    #textInput {
+      position: relative;
+      visibility: hidden;
+      border: thin grey solid;
+      width: 450px;
+      height: 495px;
+      top: -550px;
+      left: 210px;
+      background-color: white;
+    }
+    #nodeClose {
+      position: absolute;
+      margin: 1%;
+      top: 0;
+      right: 0;
+      border: thin solid black;
+    }
+    #nodeTitle  {
+      margin-top: 2%;
+      padding: 0%;
+      border-bottom: thin grey solid;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+    }
+    #nodeText {
+      position: absolute;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      resize: none;
+    }
+    #nodeSave {
+      position: absolute;
+      margin: 1%;
+      bottom: 0;
+      right: 0;
+      border: thin solid black;
+    }
+    #menuBar {
+      position: absolute;
+      border: black thin solid;
+      width: 60px;
+      height: 600px;
+      left: 801px;
+    }
+    #newNode {
+      margin-top: 6%;
+      padding: 0%;
+      border: thin black solid;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      font-size: 2em;
+    }
+    input, textarea {
+      border: 0;
+      font: 15px arial, sans-serif;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="gameArea">
+    <div id="menuBar">
+      <input id="newNode" type="button" value=" + " onClick="generateNewNode()">
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+  </div>
+  <div id="textInput">
+    <form id="nodeForm">
+      <input id="nodeClose" type="button" value="X" onClick="closeNode()">
+      <input id="nodeTitle" type="text" placeholder="Untitled Node" name="nodeTitle" size="45">
+      <textarea id="nodeText" name="nodeText" rows="25" cols="50">Double-click to modify this text</textarea>
+      <input id="nodeSave" type="button" value="Save" onClick="collectNodeData()">
+    </form>
+  </div>
+  <script src="\node_modules\fabric\dist\fabric.js"></script>
+  <script src="js\fabric.canvasex.js"></script>
+  <script src="js\story.js"></script>
+</body>
+</html>

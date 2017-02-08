@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>DSSL-story</title>
+  <meta charset="utf-8" />
+
+  <style>
+    #menu {
+      position: fixed;
+      border: thin black solid;
+      width: 130px;
+      height: 180px;
+      right: 20px;
+      bottom: 20px;
+    }
+    .menu-button {
+      position: relative;
+      border: thin black solid;
+      width: 100px;
+      height: 50px;
+      margin: 20px auto;
+      cursor: pointer;
+    }
+    .menu-button-text {
+      position: absolute;
+      color: black;
+      top: 50%;
+      left: 15%;
+      margin: -10px auto 0;
+    }
+    .menu-button:hover {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="menu">
+    <a href="http://localhost:3000/newStory.html">
+      <div id="button-new-story" class="menu-button">
+        <div class="menu-button-text">New Story</div>
+      </div>
+    </a>
+    <a href="http://localhost:3000/newGame.html">
+      <div id="button-play-story" class="menu-button">
+        <div class="menu-button-text">Play Story</div>
+      </div>
+    </a>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+    function startNewStory() {
+      socket.emit('', $('#m').val());
+    }
+  </script>
+
+</body>
+
+</html>
