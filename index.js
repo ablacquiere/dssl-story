@@ -5,10 +5,14 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var router = express.Router();
 
+const MongoClient = require('mongodb').MongoClient;
+
+var db;
+
 var bodyParser = require('body-parser');
 
-app.use(bodyParser.json());  
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //app.use(router);
 //app.set('game', path.join(__dirname,'game'));
@@ -32,6 +36,19 @@ app.get('/story', function(req, res){
   res.sendFile(__dirname + '/story/index.html');
 });
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+app.post('/test', (req, res) => {
+  db.collection('test').save(req.body, (err, result) => {
+    if (err) return console.log(err)
+
+    console.log('saved to database')
+
+  })
+})
+
+MongoClient.connect('mongodb://ab-test:temppass@ds161159.mlab.com:61159/crud-blacqu-test', (err, database) => {
+  if (err) return console.log(err)
+  db = database
+  app.listen(3000, () => {
+    console.log('listening on 3000')
+  })
 });

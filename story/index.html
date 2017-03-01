@@ -85,11 +85,12 @@
     <canvas id="canvas" width="800" height="600"></canvas>
   </div>
   <div id="textInput">
-    <form id="nodeForm" method="post">
+    <form id="nodeForm" action="/test" method="post">
       <input id="nodeClose" type="button" value="X" onClick="closeNode()">
       <input id="nodeTitle" type="text" placeholder="Untitled Node" name="nodeTitle" size="45">
       <textarea id="nodeText" name="nodeText" rows="25" cols="50">Double-click to modify this text</textarea>
-      <input id="nodeSave" type="button" value="Save" onClick="collectNodeData()">
+      <input id="nodeSave" type="submit" value="Save" onClick="collectNodeData()">
+      <!-- <button type="submit">Submit</button> -->
     </form>
   </div>
   <script src="./js/fabric.js"></script>
