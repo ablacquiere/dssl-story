@@ -38,6 +38,7 @@ app.get('/story', function(req, res){
 
 app.post('/test', (req, res) => {
   db.collection('test').save(req.body, (err, result) => {
+    console.log(req.body);
     if (err) return console.log(err)
 
     console.log('saved to database')
