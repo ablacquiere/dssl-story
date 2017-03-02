@@ -9,10 +9,10 @@ var counter = 1;
 
 function collectNodeData(){
   console.log(canvas.getActiveObject());
-   var title = document.getElementById("nodeTitle").value;
-   var text = document.getElementById("nodeText").value;
-   var id = Math.floor(Math.random()*100000);
-   tiDiv.style.visibility = "hidden";
+  // var title = document.getElementById("nodeTitle").value;
+  // var text = document.getElementById("nodeText").value;
+  // var id = Math.floor(Math.random()*100000);
+  tiDiv.style.visibility = "hidden";
 }
 
 function generateNewNode() {

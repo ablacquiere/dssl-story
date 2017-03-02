@@ -38,6 +38,11 @@
       transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
     }
+    #nodeRequired {
+      position: absolute;
+      bottom: 5px;
+      left: 20px;
+    }
     #nodeText {
       position: absolute;
       top: 35px;
@@ -70,6 +75,16 @@
       -webkit-transform: translateX(-50%);
       font-size: 2em;
     }
+    #saveAll {
+      margin-top: 6%;
+      padding: 0%;
+      border: thin black solid;
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+    }
     input, textarea {
       border: 0;
       font: 15px arial, sans-serif;
@@ -81,6 +96,7 @@
   <div id="gameArea">
     <div id="menuBar">
       <input id="newNode" type="button" value=" + " onClick="generateNewNode()">
+      <!-- <input id="saveAll" type="submit" formaction="/test" formmethod="post" value="Save"> <!--onClick="generateNewNode()">--> -->
     </div>
     <canvas id="canvas" width="800" height="600"></canvas>
   </div>
@@ -88,9 +104,9 @@
     <form id="nodeForm" action="/test" method="post">
       <input id="nodeClose" type="button" value="X" onClick="closeNode()">
       <input id="nodeTitle" type="text" placeholder="Untitled Node" name="nodeTitle" size="45">
-      <textarea id="nodeText" name="nodeText" rows="25" cols="50">Double-click to modify this text</textarea>
+      <div id="nodeRequired">Required <input id="requiredCheckbox" type="checkbox"></div>
+      <textarea id="nodeText" name="nodeText" rows="25" cols="50">Triple-click to modify this text</textarea>
       <input id="nodeSave" type="submit" value="Save" onClick="collectNodeData()">
-      <!-- <button type="submit">Submit</button> -->
     </form>
   </div>
   <script src="./js/fabric.js"></script>

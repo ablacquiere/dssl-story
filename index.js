@@ -37,19 +37,18 @@ app.get('/story', function(req, res){
 });
 
 app.post('/test', (req, res) => {
+  console.log("test");
   db.collection('test').save(req.body, (err, result) => {
     console.log(req.body);
-    if (err) return console.log(err)
-
-    console.log('saved to database')
-
-  })
+    if (err) return console.log(err);
+    console.log('saved to database');
+  });
 })
 
 MongoClient.connect('mongodb://ab-test:temppass@ds161159.mlab.com:61159/crud-blacqu-test', (err, database) => {
-  if (err) return console.log(err)
-  db = database
+  if (err) return console.log(err);
+  db = database;
   app.listen(3000, () => {
-    console.log('listening on 3000')
-  })
+    console.log('listening on 3000');
+  });
 });
